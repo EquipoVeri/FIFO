@@ -55,12 +55,13 @@ counter
 	.CountRead(read_addr_wire)
 );
 
-simple_dual_port_ram_single_clock 
+FIFO_ram 
 #(
 	.DATA_WIDTH(Word_Length),
 	.ADDR_WIDTH(NBITS_FOR_COUNTER)
 )
-Ram(
+Ram
+(
 	.data(DataInput),
 	.read_addr(read_addr_wire), 
 	.write_addr(write_addr_wire),
